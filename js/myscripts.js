@@ -40,19 +40,15 @@ crusts.forEach(function(sizePair){
   orderForm.crustsArray.push(newPrice)
 });
 /////////////////FRONT END///////////////////
-var sampleSize  = orderForm.sizesArray[1];
-var sampleTopping  = orderForm.toppingsArray[1];
-var sampleCrust  = orderForm.crustsArray[1];
-// var newPizza = new Pizza(sampleSize, sampleTopping, sampleCrust);
 $(function(){
   $("#newPizzaButton").click(function(){
     var blankOption = new OptionPrice(" ", 0);
     var newPizza = new Pizza(blankOption, blankOption, blankOption);
     $("#priceDisplay").show();
-
     orderForm.sizesArray.forEach(function(item){
       $("#sizesOptions").append('<button type="button" name="button">'+item.name+'</button>');
       $("button").last().click(function(){
+        $(this).toggleClass("clicked");
         newPizza.pizzaSize = item;
         $("#price").text(newPizza.getPrice());
       });
@@ -60,6 +56,7 @@ $(function(){
     orderForm.crustsArray.forEach(function(item){
       $("#crustsOptions").append('<button type="button" name="button">'+item.name+'</button>');
       $("button").last().click(function(){
+        $(this).toggleClass("clicked");
         newPizza.crust = item
         $("#price").text(newPizza.getPrice());
       });
@@ -67,6 +64,7 @@ $(function(){
     orderForm.toppingsArray.forEach(function(item){
       $("#toppingsOptions").append('<button type="button" name="button">'+item.name+'</button>');
       $("button").last().click(function(){
+        $(this).toggleClass("clicked");
         newPizza.topping.push(item);
         $("#price").text(newPizza.getPrice());
       });
