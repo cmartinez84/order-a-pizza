@@ -32,6 +32,10 @@ button:hover{
 .descriptions span{
   font-weight: bold;
 }
+.descriptionsRow, .optionsRow{
+  padding: 45px;
+  background: rgba(0,0,0,.8);
+}
 #pizzaBackground{
   position: fixed;
   top:auto;
@@ -41,12 +45,12 @@ button:hover{
 .container{
   text-align: center;
 }
-.col-sm-4{
+/*.col-sm-4{
   /*border: 1px dashed white;*/
   padding: 45px;
   background: rgba(0,0,0,.8);
 
-}
+}*/
 #priceDisplay{
   font-size: 4em;
   color: white;
