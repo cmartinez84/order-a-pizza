@@ -36,7 +36,7 @@ a p{
   background: rgba(0,0,0,0.5) !important;
 }
 #beginNewPizza{
-  margin-top: 70%;
+  margin-top: 75%;
 }
 .container{
   max-width: 800px;
@@ -69,6 +69,7 @@ a p{
   width: 100%;
   border: 1px solid white;
   margin-top: 75%;
+  display:none;
 }
 #divider{
   margin: 0px;
