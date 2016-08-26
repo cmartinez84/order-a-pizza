@@ -67,9 +67,19 @@ $(function(){
     orderForm.toppingsArray.forEach(function(item){
       $("#toppingsOptions").append('<button type="button" name="button">'+item.name+'</button>');
       $("button").last().click(function(){
+
+        if($(this).hasClass("clicked")){
+            var opposite = new OptionPrice (item.name, item.price);
+            opposite.price = (0-opposite.price);
+            newPizza.topping.push(opposite);
+            $("#price").text(newPizza.getPrice());
+        }
+        else{
+          newPizza.topping.push(item);
+          $("#price").text(newPizza.getPrice());
+        }
         $(this).toggleClass("clicked");
-        newPizza.topping.push(item);
-        $("#price").text(newPizza.getPrice());
+
       });
     })
   });
