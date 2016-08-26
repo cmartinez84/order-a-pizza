@@ -1,27 +1,37 @@
-function Pizza (size, toppings, crust){
-  this.size = size;
-  this.toppings = toppings;
-  this.crust = curst;
+function Pizza(pizzaSize){
+ this.pizzaSize = pizzaSize;
+ this.topping = [];
+ this.crust = [];
 }
+Pizza.prototype.getPrice = function(){
+  return this.pizzaSize.price;
+}
+
+
+
+
+
 function OptionPrice (modification, price){
-  this.modification = modification;
+  this.name = modification;
   this.price = price;
 }
-OptionPrice.prototype.getPrice = function(){
-  return this.price;
-}
+
 var orderForm = {
-  sizeArray: [],
+  sizesArray: [],
   toppingsArray: [],
   crustsArray: [],
 }
+
+
+
+
 var sizes = [["personal pan pizza",1], ["small", 2],["medium", 3],["large", 4],["x-large", 5],["family size", 6]];
 var toppings = [["anchovies", 1],["pepperoni", 1],["genoa salami",1.5 ],["chorizo", 1],["bell peppers", 1],["tomatoes", .75],["olives",.50],["buffalo mozzerella", 1.5],["fresh basil"], 1];
 var crusts = [["thin curst", 1],["regular curst", 1],["stuffed crust", 2],["double decker", 3 ], ["gluten-free", 4]];
 
 sizes.forEach(function(sizePair){
   var newPrice = new OptionPrice(sizePair[0], sizePair[1]);
-  orderForm.sizeArray.push(newPrice)
+  orderForm.sizesArray.push(newPrice)
 });
 toppings.forEach(function(sizePair){
   var newPrice = new OptionPrice(sizePair[0], sizePair[1]);
@@ -31,3 +41,9 @@ crusts.forEach(function(sizePair){
   var newPrice = new OptionPrice(sizePair[0], sizePair[1]);
   orderForm.crustsArray.push(newPrice)
 });
+///////
+var sampleSize  = orderForm.sizesArray[1];
+var sampleTopping  = orderForm.toppingsArray[1];
+var sampleCrust  = orderForm.crustsArray[1];
+
+var newPizza = new Pizza(sampleSize);
