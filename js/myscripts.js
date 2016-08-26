@@ -1,10 +1,18 @@
-function Pizza(pizzaSize){
+function Pizza(pizzaSize, topping, crust){
  this.pizzaSize = pizzaSize;
- this.topping = [];
- this.crust = [];
+ this.topping = [topping];
+ this.crust = [crust];
 }
 Pizza.prototype.getPrice = function(){
-  return this.pizzaSize.price;
+  // return this.pizzaSize.price;
+  var pizzaPrice = this.pizzaSize.price;
+  this.topping.forEach(function(item){
+    pizzaPrice += item.price;
+  });
+  this.crust.forEach(function(item){
+    pizzaPrice += item.price;
+  });
+  return pizzaPrice;
 }
 
 
@@ -46,4 +54,4 @@ var sampleSize  = orderForm.sizesArray[1];
 var sampleTopping  = orderForm.toppingsArray[1];
 var sampleCrust  = orderForm.crustsArray[1];
 
-var newPizza = new Pizza(sampleSize);
+var newPizza = new Pizza(sampleSize, sampleTopping, sampleCrust);
