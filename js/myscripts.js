@@ -5,12 +5,10 @@ function Pizza(pizzaSize, topping, crust){
 }
 
 Pizza.prototype.getPrice = function(){
-  // return this.pizzaSize.price;
   var pizzaPrice = this.pizzaSize.price +this.crust.price;
   this.topping.forEach(function(item){
     pizzaPrice += item.price;
   });
-
   return pizzaPrice;
 }
 
