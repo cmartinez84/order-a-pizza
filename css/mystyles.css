@@ -21,8 +21,13 @@ button:hover{
   background: rgba(255,255,255,.6);
   cursor: url('../img/pizzacursor.png'), auto;
 }
-p{
-  color: white;
+
+.descriptions{
+  text-align: left;
+  color: white
+}
+.descriptions span{
+  font-weight: bold;
 }
 #pizzaBackground{
   position: absolute;
