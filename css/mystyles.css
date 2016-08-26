@@ -1,8 +1,9 @@
 body{
   background:black;
   }
-  h2{
+h1,  h2{
     color: white;
+    border-bottom: 1px solid white;
   }
 button{
 border: 2px solid white;
@@ -15,12 +16,20 @@ button:hover{
   background: rgba(255,255,255,.6);
   cursor: url('../img/pizzacursor.png'), auto;
 }
+#pizzaBackground{
+  position: absolute;
+  top:auto: 45%;
+
+  z-index: -44;
+}
 .container{
   text-align: center;
 }
-.col-xs-4{
-  border: 1px dashed white;
+.col-sm-4{
+  /*border: 1px dashed white;*/
   padding: 45px;
+  background: rgba(0,0,0,.8);
+
 }
 #price{
   font-size: 4em;
