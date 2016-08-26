@@ -7,8 +7,9 @@ function PriceConstructor (modification, price){
   this.modification = modification;
   this.price = price;
 }
+
 var orderForm = {
-  this. sizeArray = [];
-  this.toppingsArray = [];
-  this.crustOptions = []
+  sizeArray: [],
+  toppingsArray: [],
+  crustOptions: []
 }
