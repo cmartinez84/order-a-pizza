@@ -7,11 +7,13 @@ function OptionPrice (modification, price){
   this.modification = modification;
   this.price = price;
 }
-
+OptionPrice.prototype.getPrice = function(){
+  return this.price;
+}
 var orderForm = {
   sizeArray: [],
   toppingsArray: [],
-  crustsArray: []
+  crustsArray: [],
 }
 var sizes = [["personal pan pizza",1], ["small", 2],["medium", 3],["large", 4],["x-large", 5],["family size", 6]];
 var toppings = [["anchovies", 1],["pepperoni", 1],["genoa salami",1.5 ],["chorizo", 1],["bell peppers", 1],["tomatoes", .75],["olives",.50],["buffalo mozzerella", 1.5],["fresh basil"], 1];
