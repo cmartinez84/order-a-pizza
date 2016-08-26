@@ -1,18 +1,16 @@
 function Pizza(pizzaSize, topping, crust){
  this.pizzaSize = pizzaSize;
  this.topping = [topping];
- this.crust = [crust];
+ this.crust = crust;
 }
 
 Pizza.prototype.getPrice = function(){
   // return this.pizzaSize.price;
-  var pizzaPrice = this.pizzaSize.price;
+  var pizzaPrice = this.pizzaSize.price +this.crust.price;
   this.topping.forEach(function(item){
     pizzaPrice += item.price;
   });
-  this.crust.forEach(function(item){
-    pizzaPrice += item.price;
-  });
+
   return pizzaPrice;
 }
 
@@ -28,7 +26,7 @@ var orderForm = {
 }
 
 var sizes = [["personal pan pizza",1], ["small", 2],["medium", 3],["large", 4],["x-large", 5],["family size", 6]];
-var toppings = [["anchovies", 1],["pepperoni", 1],["genoa salami",1.5 ],["chorizo", 1],["bell peppers", 1],["tomatoes", .75],["olives",.50],["buffalo mozzerella", 1.5],["fresh basil"], 1];
+var toppings = [["anchovies", 1],["pepperoni", 1],["genoa salami",1.5 ],["chorizo", 1],["bell peppers", 1],["tomatoes", .75],["olives",.50],["buffalo mozzerella", 1.5],["fresh basil", 1]];
 var crusts = [["thin curst", 1],["regular curst", 1],["stuffed crust", 2],["double decker", 3 ], ["gluten-free", 4]];
 
 sizes.forEach(function(sizePair){
@@ -52,12 +50,26 @@ $(function(){
   $("#price").text(newPizza.getPrice());
   orderForm.sizesArray.forEach(function(item){
     $("#sizesOptions").append('<button type="button" name="button">'+item.name+'</button>');
+    $("button").last().click(function(){
+      newPizza.pizzaSize = item;
+      $("#price").text(newPizza.getPrice());
+
+    });
   });
   orderForm.crustsArray.forEach(function(item){
     $("#crustsOptions").append('<button type="button" name="button">'+item.name+'</button>');
+    $("button").last().click(function(){
+      newPizza.crust = item
+      $("#price").text(newPizza.getPrice());
+
+    });
   });
   orderForm.toppingsArray.forEach(function(item){
     $("#toppingsOptions").append('<button type="button" name="button">'+item.name+'</button>');
-  });
+    $("button").last().click(function(){
+      newPizza.topping.push(item);
+      $("#price").text(newPizza.getPrice());
 
+    });
+  });
 })

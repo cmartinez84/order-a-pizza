@@ -12,3 +12,7 @@ form{
   padding: 40px;
   margin: 40px;
 }
+#price{
+  font-size: 4em;
+  color: blue;
+}
