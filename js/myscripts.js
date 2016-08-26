@@ -48,7 +48,9 @@ $(function(){
     orderForm.sizesArray.forEach(function(item){
       $("#sizesOptions").append('<button type="button" name="button">'+item.name+'</button>');
       $("button").last().click(function(){
+        $("#sizesOptions>button").removeClass("clicked");
         $(this).toggleClass("clicked");
+
         newPizza.pizzaSize = item;
         $("#price").text(newPizza.getPrice());
       });
@@ -56,6 +58,7 @@ $(function(){
     orderForm.crustsArray.forEach(function(item){
       $("#crustsOptions").append('<button type="button" name="button">'+item.name+'</button>');
       $("button").last().click(function(){
+        $("#crustsOptions>button").removeClass("clicked");
         $(this).toggleClass("clicked");
         newPizza.crust = item
         $("#price").text(newPizza.getPrice());
