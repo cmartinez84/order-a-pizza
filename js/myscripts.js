@@ -67,7 +67,6 @@ $(function(){
     $("button").last().click(function(){
       newPizza.topping.push(item);
       $("#price").text(newPizza.getPrice());
-
     });
   });
 })
