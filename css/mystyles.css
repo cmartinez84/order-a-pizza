@@ -21,8 +21,23 @@ button:hover{
   background: rgba(255,255,255,.6);
   cursor: url('../img/pizzacursor.png'), auto;
 }
+a p{
+  color: white;
+}
+#sideBar{
+  position: fixed;
+  left:0px:
+  top: 20%;
+  color:white !important;
+  padding: 20px;
+  text-transform: uppercase;
+}
+#sideBar a p:hover{
+  background: rgba(0,0,0,0.5) !important;
+}
+
 .container{
-  max-width: 900px;
+  max-width: 800px;
 }
 
 .descriptions{
@@ -36,22 +51,27 @@ button:hover{
   padding: 45px;
   background: rgba(0,0,0,.8);
 }
+.row{
+  margin: 0 auto;
+}
 #pizzaBackground{
   position: fixed;
   top:auto;
   z-index: -44;
   max-width: 100%;
 }
+#priceDisplay{
+  color:white;
+  font-size: 2em;
+  bottom: 0;
+  width: 100%;
+  border: 1px solid white;
+  margin-top: 75%;
+}
+#divider{
+  margin: 0px;
+}
 .container{
   text-align: center;
-}
-/*.col-sm-4{
-  /*border: 1px dashed white;*/
-  padding: 45px;
-  background: rgba(0,0,0,.8);
 
-}*/
-#priceDisplay{
-  font-size: 4em;
-  color: white;
 }

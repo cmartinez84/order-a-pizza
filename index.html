@@ -12,16 +12,25 @@
     <title>h1</title>
   </head>
   <body>
+    <div id="sideBar">
+      <a href="#"><p>Home</p></a>
+      <a href="#"><p>About</p></a>
+      <a href="#"><p>Locations</p></a>
+      <a href="#"><p>Affiliates</p></a>
+      <a href="#"><p>FeedBack</p></a>
+      <p> Your Selections</p>
+      <div id="priceDisplay" class="">
+        <p>$<span id="price"></span> + tax </p>
+      </div>
+
+    </div>
     <img id="pizzaBackground" src="img/pizzabackground2.jpg" alt="dark pizza" />
     <div class="container">
       <div class = "row">
         <img src="img/carmelitas-pizza.png" alt="carmelitas-pizza" />
       </div>
-      <div class="row">
-        <h1> Artisan Pizza &#9830;Cocktails on Tap &#9830;Farm Fresh Veggies</h1>
-      </div>
-       <span class="glyphicon glyphicon-grain"></span>
       <div class="row descriptionsRow">
+          <img id="divider" src="img/divider2.png" alt="divider" />
       <div class="col-sm-4" action="index.html" method="post">
         <h2>Size Options:</h2>
         <div class="descriptions">
@@ -32,6 +41,7 @@
           <p><span>Large:</span> 21" $12.00</p>
           <p><span>Family:</span> 25" $15.00</p>
         </div>
+
       </div>
       <div class="col-sm-4" action="index.html" method="post">
         <h2>Crust Options:</h2>
@@ -70,15 +80,6 @@
         <div class="col-sm-4" id="toppingsOptions">
         </div>
       </div>
-
-
-
-      <div id="priceDisplay" class="">
-        <p>$<span id="price"></span> + tax </p>
-      </div>
-
-
-
 
     </div>
   </body>
