@@ -35,7 +35,9 @@ a p{
 #sideBar a p:hover{
   background: rgba(0,0,0,0.5) !important;
 }
-
+#beginNewPizza{
+  margin-top: 70%;
+}
 .container{
   max-width: 800px;
 }
