@@ -1,0 +1,14 @@
+button{
+  border: 2px solid black;
+  font-size: 3em;
+  background: transparent;
+}
+button:hover{
+  background: rgba(0,0,0,.6)
+}
+form{
+  background: transparent !important;
+  border: 2px solid black;
+  padding: 40px;
+  margin: 40px;
+}
