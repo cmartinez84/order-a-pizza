@@ -12,6 +12,7 @@ _This application allows the user to order a customizable pizza and actively see
 
 * _Clone this repo from github_
 * _Open index.html in browser_
+*_alternatively, click http://www.cmartinez84.github.io/order-a-pizza
 
 ## Known Bugs
 
@@ -29,12 +30,13 @@ _HTML, CSS, Bootstrap, JQuery, JavaScript_
 
 | Behavior | Input Ex. | Output Ex. |
 | --- | --- | --- |
-| When a clicks a button, the pizza itializes| ex: user clicks "begin"|a price of $0 displays and user is presented with options|
+| When a clicks a button, the pizza initializes| ex: user clicks "begin"|a price of $0 displays and user is presented with options|
 |all options have prices unique to their option, even if they are the same cost of another| both regular and thing crust are the same price |price does not change when reselecting a size between these two|
 |when a user presses an option, the price actively reflects their choice | ex: user presses "anchovies"| the reflected change in price should be $1|
-|User is allowed to choose as many toppings, once crust and one size| ex: user cannot choose both "medium" and "large"| but can choose as many toppings as they please| choosing a  different size will result in a change in their selection|
-|
-|deselecting a topping will also deduct the price from the total listed| ex: user clicks "anchovies" a second time | total will be deducted  by the price of anchovies|
+|User is allowed to choose as many toppings|
+ex: user can choose "toamtoes", "olives", "salami", etc | all options will add their own unique price to total, ex: $1.00+ $0.50+ 1.00, resulting in $2.50 added to their bill|
+|only one crust and one size option may be selected| clicking on "small" while "medium" is selected|| will deselect "medium". the price will be reflected immediately|
+|deselecting a topping will also deduct the price from the total listed| ex: user clicks "anchovies" a second time | total will be deducted by the price of anchovies|
 
 ### License
 
