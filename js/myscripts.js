@@ -16,7 +16,9 @@ function OptionPrice (name, price){
   this.name = name;
   this.price = price;
 }
-
+var customer = {
+  order: []
+}
 var orderForm = {
   sizesArray: [],
   toppingsArray: [],
@@ -42,15 +44,19 @@ crusts.forEach(function(sizePair){
 /////////////////FRONT END///////////////////
 $(function(){
   $("#newPizzaButton").click(function(){
+    createNewPizza();
+    $(this).fadeOut();
+  });
+  var createNewPizza = function(){
     var blankOption = new OptionPrice(" ", 0);
     var newPizza = new Pizza(blankOption, blankOption, blankOption);
+    console.log(newPizza);
     $("#priceDisplay").show();
     orderForm.sizesArray.forEach(function(item){
       $("#sizesOptions").append('<button type="button" name="button">'+item.name+'</button>');
       $("button").last().click(function(){
         $("#sizesOptions>button").removeClass("clicked");
         $(this).toggleClass("clicked");
-
         newPizza.pizzaSize = item;
         $("#price").text(newPizza.getPrice());
       });
@@ -79,7 +85,18 @@ $(function(){
           $("#price").text(newPizza.getPrice());
         }
         $(this).toggleClass("clicked");
+        });
       });
-    })
-  });
-})
+    $("#savePizza").click(function(){
+      customer.order.push(newPizza);
+      console.log(newPizza);
+      $(".optionsRow button").remove();
+      $("#selections").append("<li> Pizza" + customer.order.length + ": $" + newPizza.getPrice());
+      $(this).off();
+      });
+    };
+
+    $("#makeAnotherPizza").click(function(){
+      createNewPizza();
+    });
+});
