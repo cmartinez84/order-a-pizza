@@ -67,9 +67,9 @@ $(function(){
     orderForm.toppingsArray.forEach(function(item){
       $("#toppingsOptions").append('<button type="button" name="button">'+item.name+'</button>');
       $("button").last().click(function(){
-
         if($(this).hasClass("clicked")){
             var opposite = new OptionPrice (item.name, item.price);
+            opposite.name = false;
             opposite.price = (0-opposite.price);
             newPizza.topping.push(opposite);
             $("#price").text(newPizza.getPrice());
@@ -79,7 +79,6 @@ $(function(){
           $("#price").text(newPizza.getPrice());
         }
         $(this).toggleClass("clicked");
-
       });
     })
   });

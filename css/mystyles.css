@@ -73,10 +73,14 @@ a p{
   font-size: 2em;
   bottom: 0;
   width: 100%;
-  border: 1px solid white;
   margin-top: 75%;
   display:none;
 }
+#total{
+  border-bottom: 1px solid;
+
+}
+
 #divider{
   margin: 0px;
 }
