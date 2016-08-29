@@ -12,7 +12,7 @@ _This application allows the user to order a customizable pizza and actively see
 
 * _Clone this repo from github_
 * _Open index.html in browser_
-*_alternatively, click http://www.cmartinez84.github.io/order-a-pizza
+*_alternatively, click http://cmartinez84.github.io/order-a-pizza
 
 ## Known Bugs
 
