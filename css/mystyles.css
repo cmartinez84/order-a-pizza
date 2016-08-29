@@ -53,6 +53,12 @@ a p{
   padding: 45px;
   background: rgba(0,0,0,.8);
 }
+.optionsColumn{
+  border-top: 1px solid white;
+ padding-top: 30px;
+
+}
+
 .row{
   margin: 0 auto;
 }
