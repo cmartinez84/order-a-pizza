@@ -38,6 +38,12 @@ a p{
 #beginNewPizza{
   margin-top: 75%;
 }
+#priceDisplay button{
+  display: block;
+}
+#priceDisplay{
+  max-width: 100%;
+}
 .container{
   max-width: 800px;
 }
@@ -68,7 +74,7 @@ a p{
   z-index: -44;
   max-width: 100%;
 }
-#priceDisplay{
+#play{
   color:white;
   font-size: 2em;
   bottom: 0;
