@@ -32,7 +32,6 @@ var customer = {
   }
 }
 
-
 var orderForm = {
   sizesArray: [],
   toppingsArray: [],
@@ -115,11 +114,10 @@ $(function(){
       else{
         alert("Please choose both a crust and size option. Carbs required")
       }
-
-      });
-    };
-    $("#checkout").click(function(){
-      alert ("Your Grand Total is $" + customer.orderTotal+ " ");
     });
+  };
+  $("#checkout").click(function(){
+    alert ("Your Grand Total is $" + customer.orderTotal+ " ");
+  });
 
 });
