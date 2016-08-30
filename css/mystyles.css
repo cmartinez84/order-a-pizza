@@ -24,7 +24,6 @@ button:hover{
 a p{
   color: white;
 }
-
 #sideBar{
   position: fixed;
   left:0px:
@@ -63,9 +62,7 @@ a p{
 .optionsColumn{
   border-top: 1px solid white;
  padding-top: 30px;
-
 }
-
 .row{
   margin: 0 auto;
 }
@@ -85,9 +82,7 @@ a p{
 }
 #total{
   border-bottom: 1px solid;
-
 }
-
 #divider{
   margin: 0px;
 }
@@ -97,7 +92,4 @@ a p{
 .clicked{
   background: white;
   color: black;
-}
-#makeAnotherPizza{
-
 }
