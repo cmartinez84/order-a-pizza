@@ -103,18 +103,15 @@ $(function(){
       });
     $("#savePizza").click(function(){
       customer.order.push(newPizza);
-      console.log(newPizza);
+      customer.checkout();
+      $(this).off();
       $(".optionsRow button").remove();
       $("#selections").append("<li> Pizza" + customer.order.length + ": $" + newPizza.getPrice());
-      $(this).off();
-      customer.checkout();
       $("#grandTotal").text(customer.orderTotal);
+      $("#newPizzaButton").fadeIn();
+      $("#newPizzaButton").text("Make Another Pizza?");
       });
     };
-
-    $("#makeAnotherPizza").click(function(){
-      createNewPizza();
-    });
     $("#checkout").click(function(){
 
       alert ("Your Grand Total is $" + customer.orderTotal+ " ");

@@ -24,6 +24,7 @@ button:hover{
 a p{
   color: white;
 }
+
 #sideBar{
   position: fixed;
   left:0px:
@@ -96,4 +97,7 @@ a p{
 .clicked{
   background: white;
   color: black;
+}
+#makeAnotherPizza{
+
 }
