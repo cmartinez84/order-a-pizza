@@ -102,18 +102,23 @@ $(function(){
         });
       });
     $("#savePizza").click(function(){
-      customer.order.push(newPizza);
-      customer.checkout();
-      $(this).off();
-      $(".optionsRow button").remove();
-      $("#selections").append("<li> Pizza" + customer.order.length + ": $" + newPizza.getPrice());
-      $("#grandTotal").text(customer.orderTotal);
-      $("#newPizzaButton").fadeIn();
-      $("#newPizzaButton").text("Make Another Pizza?");
+      if((newPizza.crust !== blankOption) && (newPizza.size !==blankOption)){
+        customer.order.push(newPizza);
+        customer.checkout();
+        $(this).off();
+        $(".optionsRow button").remove();
+        $("#selections").append("<li> Pizza" + customer.order.length + ": $" + newPizza.getPrice());
+        $("#grandTotal").text(customer.orderTotal);
+        $("#newPizzaButton").fadeIn();
+        $("#newPizzaButton").text("Make Another Pizza?");
+      }
+      else{
+        alert("Please choose both a crust and size option. Carbs required")
+      }
+
       });
     };
     $("#checkout").click(function(){
-
       alert ("Your Grand Total is $" + customer.orderTotal+ " ");
     });
 
