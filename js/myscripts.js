@@ -2,6 +2,7 @@ function Pizza(pizzaSize, topping, crust){
  this.pizzaSize= pizzaSize;
  this.topping = [topping];
  this.crust = crust
+ this.price = 0;
 }
 
 Pizza.prototype.getPrice = function(){
@@ -9,6 +10,7 @@ Pizza.prototype.getPrice = function(){
   this.topping.forEach(function(item){
     pizzaPrice += item.price;
   });
+  this.price = pizzaPrice;
   return pizzaPrice;
 }
 
@@ -16,9 +18,21 @@ function OptionPrice (name, price){
   this.name = name;
   this.price = price;
 }
+
 var customer = {
-  order: []
+  order: [],
+  orderTotal: 0,
+  checkout: function(){
+    var total =0;
+    this.order.forEach(function(pizza){
+      total += pizza.price;
+    });
+    console.log( total);
+    this.orderTotal = total;
+  }
 }
+
+
 var orderForm = {
   sizesArray: [],
   toppingsArray: [],
@@ -93,10 +107,17 @@ $(function(){
       $(".optionsRow button").remove();
       $("#selections").append("<li> Pizza" + customer.order.length + ": $" + newPizza.getPrice());
       $(this).off();
+      customer.checkout();
+      $("#grandTotal").text(customer.orderTotal);
       });
     };
 
     $("#makeAnotherPizza").click(function(){
       createNewPizza();
     });
+    $("#checkout").click(function(){
+
+      alert ("Your Grand Total is $" + customer.orderTotal+ " ");
+    });
+
 });
